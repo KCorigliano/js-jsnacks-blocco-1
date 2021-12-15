@@ -1,14 +1,20 @@
-const num=parseInt(prompt('Inserisci qui un numero di 4 cifre'));
+let num;
 let sum=0;
 
 let counter=0;
 
-// do {
-//     num=parseInt(prompt('Inserisci qui un numero di 4 cifre'));
-//     if (isNaN(num) || (num.length !== 4)) {
-//         alert("Inserisci qui un numero di 4 cifre");
-//     }
-// } while ((isNaN(num)) || !(num.length == 4));
+do {
+  num=parseInt(prompt('Inserisci qui un numero di 4 cifre'));
+  console.log('cico' + num + 'if num ' + isNaN(num) + 'if length ' + (num <= 9999));
+  if (!num){
+    break;
+  }
+  if (isNaN(num) || num > 9999 || num < 1000) {
+    alert("Inserisci qui un numero di 4 cifre");
+    console.log('if num' + isNaN(num));
+  }
+} while ((isNaN(num)) || num > 9999 || num < 1000);
+
 
 const digits = String(num)
   .split('')
