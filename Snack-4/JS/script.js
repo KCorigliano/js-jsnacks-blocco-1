@@ -15,14 +15,21 @@ do {
   }
 } while ((isNaN(num)) || num > 9999 || num < 1000);
 
+num=String(num);
 
-const digits = String(num)
-  .split('')
-  .map(Number);
-  
-for (i=0; i<digits.length; i++){
-  sum+=parseInt(digits[i]);
+for(let i=0;i<num.length;i++){
+  sum+=parseInt(num[i]);
+  console.log(sum);
 }
+
+// Variante
+// const digits = String(num)
+//   .split('')
+//   .map(Number);
+  
+// for (i=0; i<digits.length; i++){
+//   sum+=parseInt(digits[i]);
+// }
 
 
 alert(`La somma dei numeri che compongono il tuo numero è: ${sum}`);
